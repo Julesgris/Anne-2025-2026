@@ -16,10 +16,10 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
         Bonjour ceci est un test
-# Adressage IP
-    - Bourges : 172.28.0-31.0 /19 
+# Adressage IP 
     - Chartres : 172.28.32-63.0 /19 
     - Tours : 172.28.64-95.0 /19 
     - Orléans : 172.28.96-127.0 /19 
-    - Blois : 172.28.128-159.0 /19
+    - Bourges : 172.28.128-159.0 /19
+    - Blois : 172.28.160.0 /19
     - Nutomix : 172.16.90.200 : 9440
