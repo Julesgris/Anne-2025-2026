@@ -15,4 +15,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-        Bonjour ceci est un test, j'aime ton test 
+        Bonjour ceci est un test
