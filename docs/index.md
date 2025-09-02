@@ -15,6 +15,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-
-## Adresse IPV4
-    bonjour il y auratoute les adresse ipv4 referencer ici
+        Bonjour ceci est un test
