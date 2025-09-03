@@ -23,3 +23,8 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     - Bourges : 172.28.128-159.0 /19
     - Blois : 172.28.160.0 /19
     - Nutomix : 172.16.90.200 : 9440
+
+## Tableau d'adresse
+    | Equipement        | réseaux           | adresse ip    |
+    |-------------------------------------------------------|
+    | TRS-Switch-core    192.168.130.0 /27   192.18.130.30  |
