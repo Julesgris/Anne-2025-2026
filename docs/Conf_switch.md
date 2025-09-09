@@ -1,4 +1,7 @@
 # Configuration du switch core
+
+Voici les étapes pour la configuration de notre coeur de réseau 
+
 ## VLAN
 en mode configuration
 ``` 
@@ -30,4 +33,36 @@ Ensuite avec renseigner l'adresse ip suivie du masque de sous-réseau
 ip address X.X.X.X X.X.X.X
 ```
 
+## Compte SSH 
 
+On a créé nos comptes utilisateurs pour la connection en ssh 
+
+```
+Username [nom d'utilisateur] secret [mot de passe]
+```
+Avoir mis secret au lieu de password permet de crypté le mot de passe.
+
+## SSH 
+
+Il faut faire les commandes dans le mode configuration
+
+Il faut généré une clé de cryptage 
+
+```
+crypto key generate rsa
+```
+puis mettre une clé en 1024 ou 2048 pour le ssh 2.0 
+
+puis il faut activer le ssh 
+
+```
+ip ssh version 2
+```
+autoriser les utilisateurs a se connecter en ssh
+
+```
+line vty 0 4
+login local
+transport input ssh
+exit
+```
