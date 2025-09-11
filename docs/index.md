@@ -45,3 +45,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     - les deux switch n'ont pas le même état sur le protocole.
 
 ![mon logo](../Anne-2025-2026/image/tours-logo-73-12005.png)
+![chat](https://placekitten.com/300/200)
