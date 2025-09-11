@@ -44,4 +44,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     - Les interfaces n'ont pas de configuration identique.
     - les deux switch n'ont pas le même état sur le protocole.
 
-! [mon logo](../image/tours-logo-73-12005.png)
+![mon logo](../image/tours-logo-73-12005.png)
