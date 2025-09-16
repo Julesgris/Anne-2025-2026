@@ -44,9 +44,7 @@ Avoir mis secret au lieu de password permet de crypté le mot de passe.
 
 ## SSH 
 
-Il faut faire les commandes dans le mode configuration
-
-Il faut généré une clé de cryptage 
+Dans le mode configuration tapez les commandes suivantes :
 
 ```
 crypto key generate rsa
