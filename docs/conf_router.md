@@ -23,8 +23,15 @@ interface GigabitEthernet0/1.[numéro pour identifer l'interfce virtuelle]
 ```
 Ensuite associer une adresse ip et l'encapsulation dot1Q
 ```
-ip adresse [adresse ip] [masque de sous réseau]
+ip address [adresse ip] [masque de sous réseau]
 ecapsulation dot1Q [numero de vlan]
+```
+
+Sur une interface physique configurer un lien vers internet. Ne pas oublier d'autorise les routes de retour.
+```
+interface GigabitEthernet0/2
+ip address [adresse public vers internet] [masque de sous réseau]
+nat outside
 ```
 ## SSH
 Dans le mode configuration tapez les commandes suivantes :
