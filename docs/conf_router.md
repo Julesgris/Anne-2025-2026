@@ -74,5 +74,34 @@ sur interface lan
 ```
 ip nat inside
 ```
+on a créé une ACL qui autorise notre réseau à être naté
 
+```
+access-list 1 permit [adresse réseau ] [Masque inversé]
+```
+puis on autorise notre réseau via l'interfacde GiggEthernet 0/1
+```
+ip nat inside source list 1 interface gigaethernet 0/1 overload
+```
 ## ROUTE
+puis on fait notre route par défault + notre route de retours 
+
+route par défault
+```
+ip route 0.0.0.0 0.0.0.0 [le prochain routeur]
+```
+notre route de retours 
+```
+ip route [Réseau] [masque] [prochain routeur]
+```
+## HSRP
+ça nous permet d'avoir 2 routeur mais un prorisé par rapport à l'autre
+le deuxieme est la pour de la redondance en cas de panne
+
+on fait les commande sur notre interface lan 
+``` 
+standby 1 ip 172.28.x.254 (interface virtuel)
+standby 1 priority 100 (priorité)
+standby 1 preempt (prendre le relay)
+```
+
