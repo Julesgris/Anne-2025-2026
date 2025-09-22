@@ -14,6 +14,7 @@ Pour le nom de domain :
 ```
 ip domain-name [nom de domain]
 ```
+On a créé
 ## Interface et adresse IP
 Sur un routeur pour faire un routage intervlan il faut configurer des interface virtuelle. Pour cela suivez les étapes ci-dessous:
 
@@ -33,6 +34,15 @@ interface GigabitEthernet0/2
 ip address [adresse public vers internet] [masque de sous réseau]
 nat outside
 ```
+## Compte SSH 
+
+On a créé nos comptes utilisateurs pour la connection en ssh 
+
+```
+Username [nom d'utilisateur] privilege 15 secret [mot de passe]
+```
+Avoir mis secret au lieu de password permet de crypté le mot de passe.
+
 ## SSH
 Dans le mode configuration tapez les commandes suivantes :
 
@@ -54,3 +64,15 @@ login local
 transport input ssh
 exit
 ```
+
+## NAT
+sur interface WAN 
+```
+ip nat outside
+```
+sur interface lan
+```
+ip nat inside
+```
+
+## ROUTE
