@@ -39,7 +39,7 @@ nat outside
 On a créé nos comptes utilisateurs pour la connection en ssh 
 
 ```
-Username [nom d'utilisateur] privilege 15 secret [mot de passe]
+Username [nom d'utilisateur] secret [mot de passe]
 ```
 Avoir mis secret au lieu de password permet de crypté le mot de passe.
 
