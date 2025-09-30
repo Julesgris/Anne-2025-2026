@@ -91,3 +91,4 @@ notre route de retours
 ```
 ip route 
 ip route [Réseau] [masque] [prochain routeur]
+```
