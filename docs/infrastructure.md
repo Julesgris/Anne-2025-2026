@@ -1,13 +1,13 @@
 # Infrastructure réseaux logique
 
 ## Premiere version du réseaux
-![](image/first_version_réseaux.drawio.svg)
+![](image/réseaux_projet.drawio.png)
 
 ## Avec un pare-feu(Stormshield)
-![](image/réseaux_stormshield.drawio.svg)
+![](image/réseaux_avec_stormshield.drawio.png)
 
 ## Avec deux pare-feu(ajout de OPNsense)
-![](image/réseaux_avec_2_pare-feu.drawio.svg)
+![](image/réseaux_avec_2_pare-feu.drawio.png)
 
 # Infrastructure réseaux physique
-![](image/schéma_physique.drawio.svg)
+![](image/schéma_physique.drawio.png)
