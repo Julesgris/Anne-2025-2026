@@ -1,0 +1,35 @@
+:root {
+  --bg: #f8f9fb;
+  --text: #222;
+  --link: #0066cc;
+  --accent: #0055aa;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+pre, code {
+  background: #f3f3f3;
+  padding: 0.2em 0.4em;
+  border-radius: 5px;
+}
