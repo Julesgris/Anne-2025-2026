@@ -24,13 +24,8 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     - Blois : 172.28.160.0 /19
     - Nutomix : 172.16.90.200 : 9440
 
-## Tableau d'adresse
-    | Equipement        | réseaux           | adresse ip    |
-    |-------------------------------------------------------|
-    | TRS-Switch-core    192.168.130.0 /27   192.18.130.30  |
-
 ## Nutomix
-    - login@lan.sio.lyceefulbert.fr
+    - [nom d'utilisateur]@lan.sio.lyceefulbert.fr
 
 # Les problèmes rencontrer
 ## SSH
@@ -44,5 +39,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     - Les interfaces n'ont pas de configuration identique.
     - les deux switch n'ont pas le même état sur le protocole.
 
-![mon logo](../Anne-2025-2026/image/tours-logo-73-12005.png)
-![chat](https://placekitten.com/300/200)
