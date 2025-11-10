@@ -43,14 +43,22 @@ pre, code {
 
 
 .wy-nav-content {
-  margin-left: 0 !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  padding: 2rem !important;
+margin: 0 !important;
+padding: 3rem 4rem !important;
+width: 100% !important;
+max-width: 100% !important;
+background: #fff !important;
+box-shadow: none !important;
 }
 
 .wy-body-for-nav,
-.wy-grid-for-nav,
+.wy-grid-for-nav {
+display: block !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 100% !important;
+max-width: 100% !important;
+}
 .wy-nav-content-wrap,
 .rst-content {
   margin: 0 !important;
