@@ -33,3 +33,37 @@ pre, code {
   padding: 0.2em 0.4em;
   border-radius: 5px;
 }
+
+
+
+.md-sidebar {
+  display: none !important;
+}
+
+/* Élargit le contenu principal sur toute la largeur */
+.md-main__inner {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Centre le contenu */
+.md-content {
+  margin: 0 auto !important;
+  padding: 2em !important;
+}
+
+/* Centre les titres */
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+/* Option : supprime le fond gris et rend le fond blanc */
+body {
+  background: #ffffff !important;
+}
+
+/* Option : recentre les blocs de texte */
+.md-content__inner {
+  margin: 0 auto !important;
+  max-width: 900px;
+}
