@@ -7,9 +7,6 @@ On a appuyé 15s sur le bouton reset qui est derrière de l'appareil jusqu'à le
 
 Ensuite j'ai mit en place les interfaces réseau du LAN et WAN.
 
-**IP LAN : 172.28.95.246**
-
-**IP WAN : 172.28.95.253**
 
 Pour l'interface du LAN, j'ai fait passer les vlans LAN et MANA. en créant les VLANs dans l'interface in que j'ai ensuite déjactiver l'interface IN pour que uniquement les VLANs passent.
 
