@@ -36,34 +36,37 @@ pre, code {
 
 
 
-.md-sidebar {
+
+.wy-nav-side {
   display: none !important;
 }
 
-/* Élargit le contenu principal sur toute la largeur */
-.md-main__inner {
+
+.wy-nav-content {
   margin-left: 0 !important;
   max-width: 100% !important;
+  width: 100% !important;
+  padding: 2rem !important;
 }
 
-/* Centre le contenu */
-.md-content {
-  margin: 0 auto !important;
-  padding: 2em !important;
+.wy-body-for-nav,
+.wy-grid-for-nav,
+.wy-nav-content-wrap,
+.rst-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
-/* Centre les titres */
-h1, h2, h3, h4 {
-  text-align: center;
+.wy-grid-for-nav {
+  display: block !important;
 }
 
-/* Option : supprime le fond gris et rend le fond blanc */
 body {
   background: #ffffff !important;
 }
 
-/* Option : recentre les blocs de texte */
-.md-content__inner {
-  margin: 0 auto !important;
-  max-width: 900px;
+h1, h2, h3 {
+  text-align: center;
 }
