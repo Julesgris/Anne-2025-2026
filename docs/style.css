@@ -73,3 +73,20 @@ html, body {
 footer {
   display: none !important;
 }
+
+.rst-footer-buttons,
+.rst-footer-buttons[role="navigation"],
+a[accesskey="p"],
+a[accesskey="n"],
+a.btn,
+a.btn-neutral,
+a.btn-primary {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Supprime aussi le petit espace laissé dessous */
+footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
