@@ -4,3 +4,6 @@ plugins :
 
 extra_css:
   - style/style.css
+
+theme:
+  name: mkdocs
