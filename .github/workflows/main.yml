@@ -29,6 +29,6 @@ jobs:
       - run: pip install mkdocs-drawio
       - run: mkdocs gh-deploy --force
 
-theme:
-  name: readthedocs
-  include_sidebar: false
+# theme:
+#  name: readthedocs
+# include_sidebar: false
