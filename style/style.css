@@ -57,6 +57,7 @@ pre, code {
   padding: 0 !important;
   max-width: 100% !important;
   width: 100% !important;
+  max-width: 100% !important;
 }
 
 .wy-grid-for-nav {
