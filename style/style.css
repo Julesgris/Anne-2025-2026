@@ -1,4 +1,5 @@
 
+
 /* ==========================================
    MODE PLEIN ÉCRAN TOTAL - MKDOCS READTHEDOCS
    ========================================== */
@@ -16,9 +17,9 @@
   display: block !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
 }
 
 /* Supprimer toute mise en page en tableau */
@@ -26,22 +27,22 @@
   display: block !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
   background: #fff !important;
 }
 
 /* Contenu principal plein écran */
 .wy-nav-content {
-width: 100vw !important; max-width: none !important;
+width: 100% !important; max-width: none !important;
 }
 .rst-content {
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
   background: #fff !important;
   box-shadow: none !important;
   overflow: auto !important;
@@ -51,9 +52,9 @@ width: 100vw !important; max-width: none !important;
 html, body {
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
   overflow: hidden;
   background: #fff !important;
 }
@@ -66,5 +67,6 @@ h1, h2, h3 {
 /* Pour retirer le bandeau "Built with MkDocs..." */
 footer {
   display: none !important;
+  
 }
 
