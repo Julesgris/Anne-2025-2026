@@ -3,7 +3,7 @@ plugins :
   - drawio
 
 extra_css:
-  - style/style.css
+  - style.css
 
 theme:
   name: readthedocs
