@@ -74,19 +74,19 @@ footer {
   display: none !important;
 }
 
-.rst-footer-buttons,
-.rst-footer-buttons[role="navigation"],
-a[accesskey="p"],
-a[accesskey="n"],
-a.btn,
-a.btn-neutral,
-a.btn-primary {
+/* Masque complètement la barre flottante en bas à gauche */
+.rst-versions,
+.rst-versions .rst-current-version,
+.rst-versions .rst-other-versions,
+.wy-nav-side .rst-versions {
   display: none !important;
   visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
 }
 
-/* Supprime aussi le petit espace laissé dessous */
-footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+/* Supprime aussi tout espace qui restait à cet emplacement */
+.wy-nav-side {
+  padding-bottom: 0 !important;
 }
