@@ -71,7 +71,9 @@ pre, code {
 }
 
 /* Contenu principal plein écran */
-.wy-nav-content,
+.wy-nav-content {
+width: 100vw !important; max-width: none !important;
+}
 .rst-content {
   margin: 0 !important;
   padding: 0 !important;
