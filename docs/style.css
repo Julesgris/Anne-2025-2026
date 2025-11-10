@@ -50,168 +50,6 @@ html, body {
   margin: 0 !important;
   padding: 0 !important;
   width: 100vw !important;
-
-/* ==========================================
-   MODE PLEIN ÉCRAN TOTAL - MKDOCS READTHEDOCS
-   ========================================== */
-
-/* Masquer complètement la barre latérale gauche */
-.wy-nav-side,
-.wy-side-scroll {
-  display: none !important;
-  width: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Forcer la grille principale à occuper tout l’écran */
-.wy-grid-for-nav {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-}
-
-/* Supprimer toute mise en page en tableau */
-.wy-body-for-nav {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  background: #fff !important;
-}
-
-/* Contenu principal plein écran */
-.wy-nav-content {
-width: 100% !important; max-width: none !important;
-}
-.rst-content {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  background: #fff !important;
-  box-shadow: none !important;
-  overflow: auto !important;
-}
-
-/* Supprimer toute limite de largeur */
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  overflow: hidden;
-  background: #fff !important;
-}
-
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-
-/* ==========================================
-   MODE PLEIN ÉCRAN TOTAL - MKDOCS READTHEDOCS
-   ========================================== */
-
-/* Masquer complètement la barre latérale gauche */
-.wy-nav-side,
-.wy-side-scroll {
-  display: none !important;
-  width: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Forcer la grille principale à occuper tout l’écran */
-.wy-grid-for-nav {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-}
-
-/* Supprimer toute mise en page en tableau */
-.wy-body-for-nav {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  background: #fff !important;
-}
-
-/* Contenu principal plein écran */
-.wy-nav-content {
-width: 100% !important; max-width: none !important;
-}
-.rst-content {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  background: #fff !important;
-  box-shadow: none !important;
-  overflow: auto !important;
-}
-
-/* Supprimer toute limite de largeur */
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  overflow: hidden;
-  background: #fff !important;
-}
-
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-  background: #fff !important;
-}
-
-/* Pour centrer visuellement le texte si tu veux */
-h1, h2, h3 {
-  text-align: center;
-}
-
-/* Pour retirer le bandeau "Built with MkDocs..." */
-footer {
-  display: none !important;
-  
-}
-
-
-  background: #fff !important;
-}
-
-/* Pour centrer visuellement le texte si tu veux */
-h1, h2, h3 {
-  text-align: center;
-}
-
-/* Pour retirer le bandeau "Built with MkDocs..." */
-footer {
-  display: none !important;
-  
-}
-
-
   max-width: 100vw !important;
   overflow-x: hidden !important;
   background: #fff !important;
@@ -220,4 +58,11 @@ footer {
 /* (Facultatif) Centrer les titres */
 h1, h2, h3 {
   text-align: center;
+}
+
+html, body {
+  overflow-x: hidden !important; /* pas de scroll horizontal */
+  overflow-y: auto !important;   /* scroll vertical activé */
+  height: auto !important;
+  min-height: 100vh !important;
 }
