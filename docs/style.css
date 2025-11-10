@@ -26,6 +26,9 @@
   padding: 2rem !important;
   background: #fff !important;
   box-shadow: none !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: visible !important;
 }
 
 /* Enlever les marges fantômes autour du contenu */
