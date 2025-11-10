@@ -1,3 +1,9 @@
 site_name: Doc TOURS SportLudique
 plugins :
   - drawio
+
+extra_css:
+  - style.css
+
+theme:
+  name: readthedocs
