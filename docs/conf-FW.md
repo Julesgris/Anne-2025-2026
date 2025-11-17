@@ -11,5 +11,6 @@ Ensuite j'ai mit en place les interfaces réseau du LAN et WAN.
 Pour l'interface du LAN, j'ai fait passer les vlans LAN et MANA. en créant les VLANs dans l'interface in que j'ai ensuite déjactiver l'interface IN pour que uniquement les VLANs passent.
 
 ensuite j'ai créer des objet pour les routes et la gateway. ce qui m'a permit de faire la route de retour.
+bonjour
 
 ![routeretour](image/stormshield/routeretour.png)
