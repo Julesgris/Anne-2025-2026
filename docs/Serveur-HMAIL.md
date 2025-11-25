@@ -36,9 +36,23 @@ route add -p <réseaux> mask <masque> <passerelle>
 ```
 
 ### Dans le DNS
+#### Externe
 Créer un nouvelle enregistrement dans le fichier /etc/bind/db.tours.sportludique.fr.externe :
 ```
 smtp    IN      A       183.44.37.1
 
         IN      MX      10      smtp.tours.sportludique.fr
 ```
+Cet enregistrement permet d'associer smtp.tours.sportludique.fr avec l'adresse ip 183.44.37.1 et le MX c'est pour Mail eXchange.
+
+#### Interne
+Créer un nouvelle enregistrement dans le fichier /etc/bind/db.tours.sportludique.fr.interne :
+```
+mail	IN	A	192.168.37.6
+
+	IN	MX	10	smtp.tours.sportludique.fr
+
+smtp	IN	CNAME	mail
+imap	IN	CNAME	mail
+```
+Cet enregistrement associe mail.tours.sportludique.fr à l'adresse 192.168.37.6 et il permet également à smtp et imap de pointer vers mail.
