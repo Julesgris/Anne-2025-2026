@@ -1,5 +1,7 @@
 # Wordpress
 
+On utilise une machine de base de donnée et une autre pour le wordpress
+
 ## Installation de mariaDB
 
 Installation du paquet de mariadb 
@@ -13,7 +15,12 @@ sudo mysql –u root –p
 ```
 
 ensuite il faut créé la base de donnée 
+VILEGES;
+```
+## Installation du WordPress
 
+Il nous faut apache pour installer le workpress
+```
 ```
 CREATE DATABASE wp_tours_sportludique;
 ```
@@ -58,6 +65,19 @@ on créait le virtalhost
 ```
 sudo nano /etc/apache2/sites-available/wp.tours.sportludique.fr.conf
 ```
+```
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'nom de la base de donnée' );
+
+/** Database username */
+define( 'DB_USER', 'nom d'utilisateur' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'mot de passe' );
+
+/** Database hostname */
+define( 'DB_HOST', 'ip de la base de donnée' );
+```
 la conf dans le fichier 
 ```
 <VirtualHost *:80>
@@ -100,8 +120,14 @@ define( 'DB_PASSWORD', 'mot de passe' );
 
 /** Database hostname */
 define( 'DB_HOST', 'ip de la base de donnée' );
+```VILEGES;
 ```
+
 ## interface web
 sur l'interface web 
 
-dans les paramètres de la page de l'administration j'ai mit le nom du site
+dans les paramètres de la page de l'administration j'ai mit le nom domaine du site.
+
+
+## Sécurisation SSL 
+
