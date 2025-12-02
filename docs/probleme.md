@@ -10,4 +10,6 @@
     - Les interfaces n'ont pas de configuration identique.
     - les deux switch n'ont pas le même état sur le protocole.
 
-    modif
+## probleme usurpation d'identité
+
+    l'ips du stormshield refusait les retours de ping, on arrivait pas à communiquer avec internet après l'application de la regle de filtrage qui permet a notre réseau lan de sortir sur internet. on a du autorisé l'usurpation d'identité entrant.
