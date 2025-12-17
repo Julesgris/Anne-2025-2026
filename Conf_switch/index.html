@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configuration du switch core - Doc TOURS SportLudique</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuration du switch core";
+        var mkdocs_page_input_path = "Conf_switch.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Doc TOURS SportLudique
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">📚 Documentation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Configuration du switch core</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vlan">VLAN</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nom-du-switch">nom du switch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ip-vlan">IP vlan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compte-ssh">Compte SSH</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssh">SSH</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lacp">LACP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#route">ROUTE</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DNS/">DNS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Serveur-HMAIL/">Installation HMAIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ansible/">Ansible</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf-FW/">Configuration du firewall lan (stormshield)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf-server/">CONFIGURATION SERVEUR + RAID</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf_router/">CONFIGURATION ROUTEUR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../infrastructure/">Infrastructure réseaux logique</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../probleme/">Les problèmes rencontrer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reverse_proxy/">Reverse Proxy</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../wordpress/">Wordpress</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Doc TOURS SportLudique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Configuration du switch core</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuration-du-switch-core">Configuration du switch core</h1>
+<p>Voici les étapes pour la configuration de notre coeur de réseau </p>
+<h2 id="vlan">VLAN</h2>
+<p>en mode configuration</p>
+<pre><code>vlan [numero]
+</code></pre>
+<p>dans la configuration du vlan </p>
+<pre><code>name [nom du VLAN]
+</code></pre>
+<h2 id="nom-du-switch">nom du switch</h2>
+<p>Il faut se mettre en mode configuration</p>
+<pre><code>conf t
+</code></pre>
+<p>Ensuite hanger le nom avec hostname</p>
+<pre><code>Hostname [nom du switch]
+</code></pre>
+<h2 id="ip-vlan">IP vlan</h2>
+<p>Pour configurer une adresse IP a un vlan il faut :</p>
+<p>Se mettre sur l'interface du vlan</p>
+<pre><code>interface vlan [numero du vlan]
+</code></pre>
+<p>Ensuite avec renseigner l'adresse ip suivie du masque de sous-réseau</p>
+<pre><code>ip address X.X.X.X X.X.X.X
+</code></pre>
+<h2 id="compte-ssh">Compte SSH</h2>
+<p>On a créé nos comptes utilisateurs pour la connection en ssh </p>
+<pre><code>Username [nom d'utilisateur] privilege 15 secret [mot de passe]
+</code></pre>
+<p>Avoir mis secret au lieu de password permet de crypté le mot de passe.</p>
+<h2 id="ssh">SSH</h2>
+<p>Dans le mode configuration tapez les commandes suivantes :</p>
+<pre><code>crypto key generate rsa
+</code></pre>
+<p>puis mettre une clé en 1024 ou 2048 pour le ssh 2.0 </p>
+<p>puis il faut activer le ssh </p>
+<pre><code>ip ssh version 2
+</code></pre>
+<p>autoriser les utilisateurs a se connecter en ssh</p>
+<pre><code>line vty 0 4
+login local
+transport input ssh
+exit
+</code></pre>
+<h2 id="lacp">LACP</h2>
+<pre><code>conf t
+interface range Gi1/0/1 - 2
+channel-group 1 mode active
+exit
+
+interface Port-channel1
+switchport mode trunk
+switchport access allowed vlan [numero de vlan]
+</code></pre>
+<h2 id="route">ROUTE</h2>
+<p>Pour activer le routage </p>
+<pre><code>ip routing
+</code></pre>
+<p>puis on fait notre route par défault + notre route de retours </p>
+<p>route par défault</p>
+<pre><code>ip route 0.0.0.0 0.0.0.0 [le prochain routeur]
+</code></pre>
+<p>notre route de retours </p>
+<pre><code>ip route 
+ip route [Réseau] [masque] [prochain routeur]
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="📚 Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DNS/" class="btn btn-neutral float-right" title="DNS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../DNS/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

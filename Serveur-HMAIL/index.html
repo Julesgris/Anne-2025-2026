@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installation HMAIL - Doc TOURS SportLudique</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation HMAIL";
+        var mkdocs_page_input_path = "Serveur-HMAIL.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Doc TOURS SportLudique
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">📚 Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conf_switch/">Configuration du switch core</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DNS/">DNS</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation HMAIL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dans-le-dns">Dans le DNS</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#externe">Externe</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#interne">Interne</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lier-les-utilisateur-de-lad">Lier les utilisateur de l'AD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creation-des-utilisateurs-sur-thunderbird">Création des utilisateurs sur Thunderbird</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ansible/">Ansible</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf-FW/">Configuration du firewall lan (stormshield)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf-server/">CONFIGURATION SERVEUR + RAID</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../conf_router/">CONFIGURATION ROUTEUR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../infrastructure/">Infrastructure réseaux logique</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../probleme/">Les problèmes rencontrer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../reverse_proxy/">Reverse Proxy</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../wordpress/">Wordpress</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Doc TOURS SportLudique</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Installation HMAIL</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-hmail">Installation HMAIL</h1>
+<h2 id="installation">Installation</h2>
+<p>Sur une machine virtuelle windows installer HMAIL :</p>
+<pre><code>Installer le serveur depuis
+www.hmailserver.com
+</code></pre>
+<p>Installation du framework avec :</p>
+<pre><code>Microsoft .NET Framework 2.0 Service Pack 1 (x64)
+</code></pre>
+<p>ou avec Powershell :</p>
+<pre><code>Install-WindowsFeature Net-Framework-Core -Source D:\sources\sxs
+</code></pre>
+<p>Puis finaliser l'installation avec vpotre administrateur et mot de passe.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Lors du début de la configuration dans l'onglet Domains ajouter votre domaine</p>
+<pre><code>ville.sportludique.fr
+</code></pre>
+<p>Ensuite dans Settings puis protocole:</p>
+<p><img alt="" src="../image/capture_smtp.png" /></p>
+<p>Enfin dans l'onglet advanced du menu :</p>
+<p><img alt="" src="../image/conf_hmail.png" /></p>
+<p>Ajouter une route permanante vers le LAN</p>
+<pre><code>route add -p &lt;réseaux&gt; mask &lt;masque&gt; &lt;passerelle&gt;
+</code></pre>
+<h3 id="dans-le-dns">Dans le DNS</h3>
+<h4 id="externe">Externe</h4>
+<p>Créer un nouvelle enregistrement dans le fichier /etc/bind/db.tours.sportludique.fr.externe :</p>
+<pre><code>smtp    IN      A       183.44.37.1
+
+        IN      MX      10      smtp.tours.sportludique.fr
+</code></pre>
+<p>Cet enregistrement permet d'associer smtp.tours.sportludique.fr avec l'adresse ip 183.44.37.1 et le MX c'est pour Mail eXchange.</p>
+<h4 id="interne">Interne</h4>
+<p>Créer un nouvelle enregistrement dans le fichier /etc/bind/db.tours.sportludique.fr.interne :</p>
+<pre><code>mail    IN  A   192.168.37.6
+
+    IN  MX  10  smtp.tours.sportludique.fr
+
+smtp    IN  CNAME   mail
+imap    IN  CNAME   mail
+</code></pre>
+<p>Cet enregistrement associe mail.tours.sportludique.fr à l'adresse 192.168.37.6 et il permet également à smtp et imap de pointer vers mail.</p>
+<h2 id="lier-les-utilisateur-de-lad">Lier les utilisateur de l'AD</h2>
+<p>On ajoute les utilisateurs de l'Active Directory grâce au script powershell suivant:</p>
+<pre><code># Script de synchronisation Active Directory vers hMailServer
+# Support AD distant avec authentification
+
+# ========== CONFIGURATION ==========
+# Configuration hMailServer
+$hMailAdminPassword = &quot;&quot;
+$defaultDomain = &quot;&quot;
+$defaultPassword = &quot;MotDePasse123!&quot; # Mot de passe par défaut pour nouveaux comptes
+
+# Configuration Active Directory DISTANT
+$adServer = &quot;&quot;  # Nom ou IP du serveur AD
+$adDomain = &quot;&quot;  # Domaine AD
+$adUsername = &quot;&quot;  # Utilisateur avec droits de lecture AD
+$adPassword = &quot;&quot;  # Mot de passe pour l'AD
+
+# Construction du chemin LDAP
+$ldapPath = &quot;LDAP://$adServer/DC=,DC=,DC=,DC=&quot;
+
+# Options
+$createNewAccounts = $true
+$updateExistingAccounts = $true
+$accountMaxSize = 1024  # Taille max en MB
+$enableAccountsByDefault = $true
+
+Write-Host &quot;========================================&quot; -ForegroundColor Cyan
+Write-Host &quot;Synchronisation AD -&gt; hMailServer&quot; -ForegroundColor Cyan
+Write-Host &quot;========================================&quot; -ForegroundColor Cyan
+
+# ========== TEST CONNECTIVITÉ AD ==========
+Write-Host &quot;`n[Préparation] Test de connectivité AD...&quot; -ForegroundColor Yellow
+
+try {
+    Write-Host &quot;  → Test ping vers $adServer...&quot; -ForegroundColor Gray
+    $pingResult = Test-Connection -ComputerName $adServer -Count 1 -Quiet -ErrorAction SilentlyContinue
+
+    if ($pingResult) {
+        Write-Host &quot;  ✓ Serveur AD accessible&quot; -ForegroundColor Green
+    } else {
+        Write-Host &quot;  ⚠ Serveur AD non pingable (peut être normal si ICMP bloqué)&quot; -ForegroundColor Yellow
+    }
+
+    Write-Host &quot;  → Test port LDAP 389...&quot; -ForegroundColor Gray
+    $tcpClient = New-Object System.Net.Sockets.TcpClient
+    $asyncResult = $tcpClient.BeginConnect($adServer, 389, $null, $null)
+    $wait = $asyncResult.AsyncWaitHandle.WaitOne(3000, $false)
+
+    if ($wait) {
+        $tcpClient.EndConnect($asyncResult)
+        $tcpClient.Close()
+        Write-Host &quot;  ✓ Port LDAP 389 accessible&quot; -ForegroundColor Green
+    } else {
+        Write-Host &quot;  ✗ Port LDAP 389 non accessible&quot; -ForegroundColor Red
+        Write-Host &quot;    Vérifiez le pare-feu et la connectivité réseau&quot; -ForegroundColor Yellow
+    }
+}
+catch {
+    Write-Host &quot;  ⚠ Erreur de test réseau: $_&quot; -ForegroundColor Yellow
+}
+
+# ========== CONNEXION HMAILSERVER ==========
+Write-Host &quot;`n[1/4] Connexion à hMailServer...&quot; -ForegroundColor Yellow
+
+$hMailApp = $null
+$domain = $null
+
+try {
+    Write-Host &quot;  → Création de l'objet COM hMailServer.Application...&quot; -ForegroundColor Gray
+    $hMailApp = New-Object -ComObject hMailServer.Application
+
+    if ($hMailApp -eq $null) {
+        throw &quot;L'objet hMailServer.Application est null&quot;
+    }
+
+    Write-Host &quot;  → Authentification...&quot; -ForegroundColor Gray
+    $authResult = $hMailApp.Authenticate(&quot;Administrator&quot;, $hMailAdminPassword)
+
+    if (-not $authResult) {
+        throw &quot;Échec de l'authentification hMailServer. Vérifiez le mot de passe.&quot;
+    }
+
+    Write-Host &quot;  → Récupération du domaine $defaultDomain...&quot; -ForegroundColor Gray
+    $domain = $hMailApp.Domains.ItemByName($defaultDomain)
+
+    if ($domain -eq $null) {
+        Write-Host &quot;`n✗ Domaine '$defaultDomain' non trouvé!&quot; -ForegroundColor Red
+        Write-Host &quot;`nDomaines disponibles:&quot; -ForegroundColor Yellow
+        for ($i = 0; $i -lt $hMailApp.Domains.Count; $i++) {
+            $d = $hMailApp.Domains.Item($i)
+            Write-Host &quot;  - $($d.Name)&quot; -ForegroundColor Cyan
+        }
+        exit
+    }
+
+    Write-Host &quot;✓ Connecté à hMailServer - Domaine: $defaultDomain&quot; -ForegroundColor Green
+}
+catch {
+    Write-Host &quot;`n✗ ERREUR de connexion hMailServer:&quot; -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Red
+    Write-Host &quot;`nVérifications:&quot; -ForegroundColor Yellow
+    Write-Host &quot;1. Service hMailServer démarré ?&quot; -ForegroundColor White
+    Write-Host &quot;2. PowerShell exécuté en Administrateur ?&quot; -ForegroundColor White
+    Write-Host &quot;3. Mot de passe administrateur correct ?&quot; -ForegroundColor White
+    exit
+}
+
+# ========== RÉCUPÉRATION DES COMPTES HMAILSERVER ==========
+Write-Host &quot;`n[2/4] Récupération des comptes hMailServer existants...&quot; -ForegroundColor Yellow
+
+$hmailAccounts = @{}
+try {
+    for ($i = 0; $i -lt $domain.Accounts.Count; $i++) {
+        $account = $domain.Accounts.Item($i)
+        $hmailAccounts[$account.Address.ToLower()] = $account
+    }
+    Write-Host &quot;✓ $($hmailAccounts.Count) comptes trouvés&quot; -ForegroundColor Green
+}
+catch {
+    Write-Host &quot;✗ Erreur: $_&quot; -ForegroundColor Red
+    exit
+}
+
+# ========== CONNEXION À L'AD DISTANT ==========
+Write-Host &quot;`n[3/4] Connexion à l'Active Directory distant...&quot; -ForegroundColor Yellow
+Write-Host &quot;  Serveur: $adServer&quot; -ForegroundColor Gray
+Write-Host &quot;  Chemin LDAP: $ldapPath&quot; -ForegroundColor Gray
+
+try {
+    # Créer des credentials pour l'AD distant
+    $secPassword = ConvertTo-SecureString $adPassword -AsPlainText -Force
+    $credential = New-Object System.Management.Automation.PSCredential($adUsername, $secPassword)
+
+    # Créer la connexion LDAP avec authentification
+    Write-Host &quot;  → Authentification sur l'AD...&quot; -ForegroundColor Gray
+
+    $directoryEntry = New-Object System.DirectoryServices.DirectoryEntry(
+        $ldapPath,
+        $adUsername,
+        $adPassword,
+        [System.DirectoryServices.AuthenticationTypes]::Secure
+    )
+
+    # Test de la connexion
+    $testBind = $directoryEntry.Name
+    if ([string]::IsNullOrEmpty($testBind) -and $directoryEntry.NativeObject -eq $null) {
+        throw &quot;Impossible de se connecter à l'AD. Vérifiez les credentials et le chemin LDAP.&quot;
+    }
+
+    Write-Host &quot;  ✓ Authentifié sur l'AD&quot; -ForegroundColor Green
+
+    # Créer le searcher
+    Write-Host &quot;  → Recherche des utilisateurs...&quot; -ForegroundColor Gray
+    $searcher = New-Object System.DirectoryServices.DirectorySearcher
+    $searcher.SearchRoot = $directoryEntry
+
+    # Filtre pour les utilisateurs avec email
+    $searcher.Filter = &quot;(&amp;(objectClass=user)(objectCategory=person)(mail=*))&quot;
+
+    # Propriétés à récupérer
+    $searcher.PropertiesToLoad.AddRange(@(
+        &quot;sAMAccountName&quot;,
+        &quot;mail&quot;,
+        &quot;givenName&quot;,
+        &quot;sn&quot;,
+        &quot;displayName&quot;,
+        &quot;userAccountControl&quot;
+    ))
+
+    $searcher.PageSize = 1000
+    $searcher.SearchScope = [System.DirectoryServices.SearchScope]::Subtree
+
+    $results = $searcher.FindAll()
+
+    Write-Host &quot;✓ $($results.Count) utilisateurs trouvés dans AD&quot; -ForegroundColor Green
+}
+catch {
+    Write-Host &quot;`n✗ ERREUR de connexion AD:&quot; -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Red
+    Write-Host &quot;`nVérifications:&quot; -ForegroundColor Yellow
+    Write-Host &quot;1. Le serveur AD '$adServer' est-il accessible ?&quot; -ForegroundColor White
+    Write-Host &quot;2. Les credentials AD sont-ils corrects ?&quot; -ForegroundColor White
+    Write-Host &quot;   Username: $adUsername&quot; -ForegroundColor Gray
+    Write-Host &quot;3. Le chemin LDAP est-il correct ?&quot; -ForegroundColor White
+    Write-Host &quot;   $ldapPath&quot; -ForegroundColor Gray
+    Write-Host &quot;4. Le port 389 (LDAP) est-il ouvert ?&quot; -ForegroundColor White
+    Write-Host &quot;5. Essayez avec LDAPS (port 636) si disponible&quot; -ForegroundColor White
+    exit
+}
+
+# ========== SYNCHRONISATION ==========
+Write-Host &quot;`n[4/4] Synchronisation en cours...&quot; -ForegroundColor Yellow
+Write-Host &quot;────────────────────────────────────────&quot; -ForegroundColor Gray
+
+$stats = @{
+    Created = 0
+    Updated = 0
+    Skipped = 0
+    Errors = 0
+}
+
+foreach ($result in $results) {
+    $props = $result.Properties
+
+    # Récupérer les informations
+    $samAccount = if ($props[&quot;samaccountname&quot;].Count -gt 0) { $props[&quot;samaccountname&quot;][0] } else { &quot;Inconnu&quot; }
+    $email = if ($props[&quot;mail&quot;].Count -gt 0) { $props[&quot;mail&quot;][0] } else { $null }
+    $firstName = if ($props[&quot;givenname&quot;].Count -gt 0) { $props[&quot;givenname&quot;][0] } else { &quot;&quot; }
+    $lastName = if ($props[&quot;sn&quot;].Count -gt 0) { $props[&quot;sn&quot;][0] } else { &quot;&quot; }
+    $displayName = if ($props[&quot;displayname&quot;].Count -gt 0) { $props[&quot;displayname&quot;][0] } else { $samAccount }
+
+    # Vérifier si le compte est actif dans AD
+    $userAccountControl = if ($props[&quot;useraccountcontrol&quot;].Count -gt 0) { $props[&quot;useraccountcontrol&quot;][0] } else { 0 }
+    $isEnabled = -not ($userAccountControl -band 0x2)  # 0x2 = ACCOUNTDISABLE
+
+    # Vérifier l'adresse email
+    if ([string]::IsNullOrWhiteSpace($email)) {
+        Write-Host &quot;⊘ $displayName - Pas d'email&quot; -ForegroundColor DarkGray
+        $stats.Skipped++
+        continue
+    }
+
+    # Forcer le domaine mail si l'email AD ne correspond pas
+    if (-not $email.EndsWith(&quot;@$defaultDomain&quot;)) {
+        $emailParts = $email.Split('@')
+        $email = &quot;$($emailParts[0])@$defaultDomain&quot;
+        Write-Host &quot;ℹ $displayName - Email modifié: $email&quot; -ForegroundColor Cyan
+    }
+
+    $emailLower = $email.ToLower()
+
+    try {
+        # Vérifier si le compte existe dans hMailServer
+        if ($hmailAccounts.ContainsKey($emailLower)) {
+            # MISE À JOUR
+            if ($updateExistingAccounts) {
+                $account = $hmailAccounts[$emailLower]
+
+                $account.PersonFirstName = $firstName
+                $account.PersonLastName = $lastName
+                $account.Active = $isEnabled
+                $account.Save()
+
+                Write-Host &quot;↻ $email - Mis à jour&quot; -ForegroundColor Cyan
+                $stats.Updated++
+            }
+            else {
+                Write-Host &quot;→ $email - Existe déjà&quot; -ForegroundColor Gray
+                $stats.Skipped++
+            }
+        }
+        else {
+            # CRÉATION
+            if ($createNewAccounts) {
+                $newAccount = $domain.Accounts.Add()
+                $newAccount.Address = $email
+                $newAccount.Password = $defaultPassword
+                $newAccount.Active = if ($enableAccountsByDefault) { $isEnabled } else { $false }
+                $newAccount.PersonFirstName = $firstName
+                $newAccount.PersonLastName = $lastName
+                $newAccount.MaxSize = $accountMaxSize
+                $newAccount.Save()
+
+                Write-Host &quot;✓ $email - Créé&quot; -ForegroundColor Green
+                $stats.Created++
+            }
+            else {
+                Write-Host &quot;⊘ $email - Nouveau (création désactivée)&quot; -ForegroundColor DarkGray
+                $stats.Skipped++
+            }
+        }
+    }
+    catch {
+        Write-Host &quot;✗ $email - ERREUR: $_&quot; -ForegroundColor Red
+        $stats.Errors++
+    }
+}
+
+# ========== RÉSULTATS ==========
+Write-Host &quot;`n========================================&quot; -ForegroundColor Cyan
+Write-Host &quot;RÉSUMÉ DE LA SYNCHRONISATION&quot; -ForegroundColor Cyan
+Write-Host &quot;========================================&quot; -ForegroundColor Cyan
+Write-Host &quot;Comptes créés    : $($stats.Created)&quot; -ForegroundColor Green
+Write-Host &quot;Comptes mis à jour: $($stats.Updated)&quot; -ForegroundColor Cyan
+Write-Host &quot;Comptes ignorés  : $($stats.Skipped)&quot; -ForegroundColor Gray
+Write-Host &quot;Erreurs          : $($stats.Errors)&quot; -ForegroundColor Red
+Write-Host &quot;────────────────────────────────────────&quot; -ForegroundColor Gray
+Write-Host &quot;Total hMailServer: $($domain.Accounts.Count) comptes&quot; -ForegroundColor White
+Write-Host &quot;========================================`n&quot; -ForegroundColor Cyan
+
+# ========== NETTOYAGE ==========
+if ($results) { $results.Dispose() }
+if ($searcher) { $searcher.Dispose() }
+if ($directoryEntry) { $directoryEntry.Dispose() }
+if ($domain -ne $null) {
+    [System.Runtime.Interopservices.Marshal]::ReleaseComObject($domain) | Out-Null
+}
+if ($hMailApp -ne $null) {
+    [System.Runtime.Interopservices.Marshal]::ReleaseComObject($hMailApp) | Out-Null
+}
+[System.GC]::Collect()
+[System.GC]::WaitForPendingFinalizers()
+
+Write-Host &quot;Synchronisation terminée!&quot; -ForegroundColor Green
+</code></pre>
+<h2 id="creation-des-utilisateurs-sur-thunderbird">Création des utilisateurs sur Thunderbird</h2>
+<p>Créer l'utilisateur avec son nom complet, son adresse mail et son mot de passe par default:</p>
+<p><img alt="" src="../image/user_thunderbird.png" /></p>
+<p>Vérifier si les serveur et les port sont correctement configuré:</p>
+<p>Le port 143 pour imap et le port 25 pour smtp
+<img alt="" src="../image/capture_serveurs.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../DNS/" class="btn btn-neutral float-left" title="DNS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ansible/" class="btn btn-neutral float-right" title="Ansible">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../DNS/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ansible/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
